@@ -5,6 +5,17 @@ import React, { Component } from "react";
 will do something when clicked*/
 }
 
+{
+  /* need to send the click event to the parent 
+    ( with information about which button was clicked), 
+    we will call this.props.OnClick  function on every button click 
+and pass e.target.name as an argument. */
+}
+
+{
+  /* logic defined of function in parent component which is app.js */
+}
+
 class KeyPadComponent extends Component {
   render() {
     return (
@@ -60,6 +71,7 @@ class KeyPadComponent extends Component {
         <button name="9" onClick={(e) => this.props.onClick(e.target.name)}>
           9
         </button>
+
         <button name="*" onClick={(e) => this.props.onClick(e.target.name)}>
           x
         </button>
@@ -71,11 +83,11 @@ class KeyPadComponent extends Component {
         <button name="0" onClick={(e) => this.props.onClick(e.target.name)}>
           0
         </button>
-        <button name="=" onClick={(e) => this.props.onClick(e.target.name)}>
-          =
-        </button>
         <button name="/" onClick={(e) => this.props.onClick(e.target.name)}>
           ÷
+        </button>
+        <button name="=" onClick={(e) => this.props.onClick(e.target.name)}>
+          =
         </button>
         <br />
       </div>
